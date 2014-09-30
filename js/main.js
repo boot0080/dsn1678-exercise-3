@@ -14,3 +14,21 @@ var buttonClickHandler = function () {
 };	
 
 sales.on('click', buttonClickHandler);
+
+
+var salesDetailsRight = $('.sales__details-right');
+var salesRight = $('.sales-right');
+
+
+var buttonClickHandlerRight = function () {
+	var isActive = salesDetailsRight.attr('data-state');
+	
+	if (isActive == 'active') {
+		salesDetailsRight.attr('data-state', 'inactive');
+	} else {
+		salesDetailsRight.attr('data-state', 'active');
+	}
+};	
+
+salesRight.on('click', buttonClickHandlerRight);
+
